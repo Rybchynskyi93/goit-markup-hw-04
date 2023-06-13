@@ -8,6 +8,8 @@
   --project-bacground-color: #e5e5e5;
   --portfolio-bacground-color: #e7e9fc;
   --footer-text-color: #f4f4fd;
+  --hover-color-studio: #404bbf;
+  --transition-hover-focus: 250ms linear, cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -138,6 +140,7 @@ img {
   letter-spacing: 0.02em;
   display: block;
   padding: 24px 0;
+  transition: color var(--transition-hover-focus);
 }
 
 .header-menu-link:is(:hover, :focus) {
@@ -164,6 +167,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   color: var(--second-text-color);
+  transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts-link:is(:hover, :focus) {
   color: #404bbf;
@@ -171,6 +175,15 @@ img {
 /*-------------------------------HERO--------------------------------------*/
 .hero {
   background: var(--bacground-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bd.jpg);
+  max-width: 1440рх;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 188px 0;
 }
@@ -256,7 +269,14 @@ img {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
 }
+.advantages-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.advantages-icon {
+}
 /*-------------------------------PROJECT--------------------------------------*/
 .project {
   padding-bottom: 120px;
@@ -291,7 +311,7 @@ img {
   background-color: var(--section-bacground-color);
 }
 
-.tem-container {
+.team-container {
 }
 
 .team-title {
@@ -336,6 +356,64 @@ img {
   letter-spacing: 0.02em;
 }
 
+.team-soc {
+}
+.team-soc-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  align-items: center;
+  justify-content: center;
+}
+
+.soc-link link {
+}
+
+.soc-item {
+  /* width: calc(100% - 48px) / 4; */
+}
+
+.soc-icon {
+}
+
+.social-ico {
+}
+/* ----------------------customers------------------ */
+.customers-title {
+  padding-bottom: 72px;
+}
+
+.customers-box {
+}
+
+.customers-list {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+.customers-item {
+  align-items: center;
+  justify-content: center;
+  color: #8e8f99;
+  border: 1px solid #8e8f99;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.customers-link {
+  /* width: 100%;
+  height: 100%; */
+}
+
+.customers-icon {
+}
 /*-------------------------------FOOTER--------------------------------------*/
 .footer {
   background-color: var(--bacground-color);
