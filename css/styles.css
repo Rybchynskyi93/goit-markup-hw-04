@@ -142,7 +142,7 @@ img {
   /* color: var(--main-text-color); */
   letter-spacing: 0.02em;
   display: block;
-  position: relative;
+  /* position: relative; */
   padding: 24px 0;
   color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -347,9 +347,14 @@ img {
   margin-bottom: 72px;
 }
 .team-list {
-  list-style: none;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 24px;
+  /* list-style: none;
+  display: flex;
+  gap: 24px; */
 }
 .team-item {
   background-color: #ffffff;
@@ -749,6 +754,11 @@ img {
   margin-bottom: 72px;
 }
 .main-btn-item {
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-btn-link {
@@ -785,11 +795,12 @@ img {
 .main-item {
   text-decoration: none;
   list-style: none;
-  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* display: block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .main-item-link {
