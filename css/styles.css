@@ -630,7 +630,7 @@ img {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scaleX(0);
 }
-/*!--------------------------------------------------------PORTFOLIO---------------------------------------------------*/
+/*!------------PORTFOLIO---------------------------------------------------*/
 
 .header {
   box-sizing: border-box;
@@ -728,7 +728,7 @@ img {
 .header-contacts-link:is(:hover, :focus) {
   color: #404bbf;
 }
-/*-------------------------------MAIN--------------------------------------*/
+/*--------------MAIN--------------------------------------*/
 .main-title {
 }
 
@@ -770,6 +770,8 @@ img {
   background-color: #404bbf;
   border: 1px solid var(--portfolio-bacground-color);
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .main-list {
@@ -783,11 +785,21 @@ img {
 .main-item {
   text-decoration: none;
   list-style: none;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-item-link {
   text-decoration: none;
   width: calc((100% - 48px) / 3);
+}
+
+.main-item-link:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .wrap-text {
@@ -811,6 +823,35 @@ img {
   color: var(--second-text-color);
 }
 
+.card-box {
+  position: relative;
+  overflow: hidden;
+}
+.card-box:hover .cover-text {
+  transform: translateY(0);
+}
+
+.card-cover {
+}
+
+.cover-item {
+}
+
+.cover-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  /* text-transform: uppercase; */
+  color: var(--section-bacground-color);
+  background-color: #4d5ae5;
+  position: absolute;
+  top: 0;
+  padding: 40px 32px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /*-------------------------------FOOTER--------------------------------------*/
 .footer {
   background-color: var(--bacground-color);
