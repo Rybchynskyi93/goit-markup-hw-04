@@ -413,6 +413,7 @@ img {
   background-color: var(--accent-color);
   border: 1px solid #4d5ae5;
   border-radius: 50%;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-link:hover,
 .soc-link:focus {
@@ -465,6 +466,8 @@ img {
   border: 1px solid #8e8f99;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier;
 }
 
 .customers-link:is(:hover, :focus) {
@@ -757,7 +760,7 @@ img {
   margin-bottom: 72px;
 }
 .main-btn-item {
-  display: block;
+  /* display: block; */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -798,17 +801,19 @@ img {
 .main-item {
   text-decoration: none;
   list-style: none;
+  display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* display: block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-item-link {
   text-decoration: none;
   width: calc((100% - 48px) / 3);
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-item-link:is(:hover, :focus) {
